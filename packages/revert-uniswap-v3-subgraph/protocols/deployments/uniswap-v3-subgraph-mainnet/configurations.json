@@ -1,0 +1,10 @@
+{
+    "graftEnabled": true,
+    "subgraphId": "QmXDAaE7sT2bVe4prmZgdSXi34EGRjpULTnF9bKi3qrwFB",
+    "graftStartBlock": 20427608,
+    "network": "mainnet",
+    "factory_startBlock": 12369621,
+    "factory_contract_address": "0x1F98431c8aD98523631AE4a59f267346ea31F984",
+    "nfpm_startBlock": 12369651,
+    "nfpm_contract_address": "0xC36442b4a4522E871399CD717aBDD847Ab11FE88"
+}

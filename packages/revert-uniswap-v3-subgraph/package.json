@@ -1,0 +1,32 @@
+{
+  "name": "@revertfinance/uniswap-v3-subgraph",
+  "version": "1.0.0",
+  "repository": "https://github.com/revert-finance/uniswap-v3-subgraph",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "test": "graph test",
+    "add-network": "cross-env ts-node ./scripts/add-network",
+    "prepare-build": "cross-env ts-node ./scripts/build",
+    "deploy-studio": "cross-env ts-node ./scripts/deploy-studio",
+    "deploy": "graph deploy --product subgraph-studio uniswap-v3-mainnet"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "0.95.0",
+    "@graphprotocol/graph-ts": "^0.35.0",
+    "@types/node": "22.10.5",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "mustache": "^4.2.0",
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}

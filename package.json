@@ -1,0 +1,29 @@
+{
+  "name": "@revertfinance/subgraph-mono-repo-root",
+  "packageManager": "yarn@3.1.0",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo for Revert Finance related subgraphs",
+  "homepage": "https://revert.finance/",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/revert-finance/uniswap-v3-subgraph/tree/7bd26246c0c4c24615591097ff7e5beff7d5439d"
+  },
+  "scripts": {
+    "lint": "prettier ./**",
+    "lint-fix": "prettier ./** --write"
+  },
+  "workspaces": [
+    "packages/**"
+  ],
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "lerna": "^8.2.1",
+    "prettier": "^3.5.3"
+  },
+  "dependencies": {
+    "matchstick-as": "^0.6.0",
+    "mustache": "^4.2.0"
+  }
+}
