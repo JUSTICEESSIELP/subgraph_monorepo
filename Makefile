@@ -15,5 +15,7 @@ setup-subgraph:
 	@cp -r $(ROOT_DIR)/scripts/* $(SUBGRAPH_DIR)/scripts/
 	@echo "Subgraph setup complete in $(SUBGRAPH_DIR)"
 
+go:
+	@echo "Entering subgraph package: $(subgraph)"
 
 	

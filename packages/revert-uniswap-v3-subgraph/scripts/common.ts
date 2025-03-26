@@ -52,7 +52,7 @@ const graphAuth = async () => {
   );
 };
 
-const graphDeployStudio = async (slug, version) => {
+const graphDeployStudio = async (slug:string, version:string) => {
   graphAuth();
   
   await executeCommand(`graph deploy ${slug} -l=${version}`);
@@ -96,8 +96,8 @@ export const build = async (network:string) => {
   await graphBuild();
 };
 
-export const deployStudio = async (network, slug, version) => {
-  // build(network);
+export const deployStudio = async (network:string, slug:string, version:string) => {
+  build(network);
   // console.log(`Deploying ${slug}/${version} for ${network}`);
   await graphDeployStudio(slug, version);
 };

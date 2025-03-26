@@ -17,7 +17,7 @@ dataSources:
     name: Factory
     network: {{network}}
     source:
-      address: {{factory_contract_address}}
+      address: '{{factory_contract_address}}'
       abi: Factory
       startBlock: {{factory_startBlock}}
     mapping:
@@ -46,7 +46,7 @@ dataSources:
     name: NonfungiblePositionManager
     network: mainnet
     source:
-      address: {{nfpm_address}}
+      address: '{{nfpm_contract_address}}'
       abi: NonfungiblePositionManager
       startBlock: {{nfpm_startBlock}}
     mapping:

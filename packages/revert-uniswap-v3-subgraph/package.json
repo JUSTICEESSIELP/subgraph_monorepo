@@ -1,16 +1,19 @@
 {
-  "name": "@revertfinance/uniswap-v3-subgraph",
+  "name": "uniswap-v3-subgraph",
   "version": "1.0.0",
   "repository": "https://github.com/revert-finance/uniswap-v3-subgraph",
   "license": "GPL-3.0-or-later",
   "scripts": {
-    "codegen": "graph codegen",
-    "build": "graph build",
-    "test": "graph test",
+    "codegen": "graph codegen --output-dir src/types/",
     "add-network": "cross-env ts-node ./scripts/add-network",
     "prepare-build": "cross-env ts-node ./scripts/build",
     "deploy-studio": "cross-env ts-node ./scripts/deploy-studio",
+    "build": "graph build",
     "deploy": "graph deploy --product subgraph-studio uniswap-v3-mainnet"
+  },
+  "peerDependencies": {
+    "@graphprotocol/graph-cli": "^0.70.0",
+    "@graphprotocol/graph-ts": "^0.35.0"
   },
   "devDependencies": {
     "@graphprotocol/graph-cli": "0.95.0",

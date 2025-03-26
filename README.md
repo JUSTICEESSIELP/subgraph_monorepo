@@ -184,7 +184,7 @@ dataSources:
     name: NonfungiblePositionManager
     network: mainnet
     source:
-      address: {{nfpm_address}}
+      address: {{nfpm_contract_address}}
       abi: NonfungiblePositionManager
       startBlock: {{nfpm_startBlock}}
     mapping:
@@ -340,8 +340,15 @@ To copy the `subgraph.template.yaml` + `docker-compose.yaml` + `.env` + `scripts
 make setup-subgraph subgraph=<subgraph-name>
 
 eg: 
-   make setup-subgraph subgraph revert-uniswap-v3-subgraph
+   make setup-subgraph subgraph=revert-uniswap-v3-subgraph
 
+```
+
+
+## Step 10: Install the packages that apply across all packages 
+
+```
+yarn lerna add cross-env --dev
 ```
 
 
