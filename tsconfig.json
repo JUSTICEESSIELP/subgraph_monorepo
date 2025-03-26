@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "CommonJS",
-   
+    "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -14,22 +14,3 @@
   },
   "exclude": ["node_modules"]
 }
-
-
-// {
-//   "extends": "@graphprotocol/graph-ts/tsconfig",
-//     "compilerOptions": {
-//       "paths": {
-//         "@graphprotocol/graph-ts": ["node_modules/@graphprotocol/graph-ts"],
-//         "@graphprotocol/graph-cli": ["node_modules/@graphprotocol/graph-cli"]
-//       },
-//       "composite": true,
-//       "strict": true,
-//       "esModuleInterop": true,
-//       "skipLibCheck": true,
-//       "forceConsistentCasingInFileNames": true,
-//       "types": ["@graphprotocol/graph-ts"]
-//     },
-//     "exclude": ["node_modules"]
-// }
-  
