@@ -46,7 +46,7 @@ https://thegraph.com/legacy-explorer/subgraph/revert-finance/uniswap-v3-base (ba
 - Deploy Studio:
   `npm run deploy-studio <network-slug> <subgraph-slug> <version>
 
-  npm run deploy-studio mainnet revert-subgraph-test 1.0.1
+  npm run deploy-studio mainnet revert-subgraph-test-optimized 1.0.1
 
 
-  yarn run deploy-studio mainnet revert-subgraph-test 1.0.1
+  yarn run deploy-studio mainnet revert-subgraph-test-optimized 1.0.1

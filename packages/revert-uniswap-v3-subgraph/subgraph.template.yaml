@@ -44,7 +44,7 @@ dataSources:
           handler: handlePoolCreated
   - kind: ethereum/contract
     name: NonfungiblePositionManager
-    network: mainnet
+    network: {{network}}
     source:
       address: '{{nfpm_contract_address}}'
       abi: NonfungiblePositionManager
@@ -86,7 +86,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pool
-    network: mainnet
+    network: {{network}}
     source:
       abi: Pool
     mapping:

@@ -1,23 +1,17 @@
 specVersion: 1.2.0
 description: Uniswap is a decentralized protocol for automated token exchange on Ethereum.
 
-features:
-  - grafting
-  - nonFatalErrors
-graft:
-  base: QmXDAaE7sT2bVe4prmZgdSXi34EGRjpULTnF9bKi3qrwFB # Subgraph ID of base subgraph
-  block: 20427608 # Block number
 repository: https://github.com/Uniswap/uniswap-v3-subgraph
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: mainnet
+    network: base
     source:
-      address: '0x1F98431c8aD98523631AE4a59f267346ea31F984'
+      address: '0x33128a8fC17869897dcE68Ed026d694621f6FDfD'
       abi: Factory
-      startBlock: 12369621
+      startBlock: 1371680
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -42,11 +36,11 @@ dataSources:
           handler: handlePoolCreated
   - kind: ethereum/contract
     name: NonfungiblePositionManager
-    network: mainnet
+    network: base
     source:
-      address: '0xC36442b4a4522E871399CD717aBDD847Ab11FE88'
+      address: '0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1'
       abi: NonfungiblePositionManager
-      startBlock: 12369651
+      startBlock: 1371714
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -84,7 +78,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pool
-    network: mainnet
+    network: base
     source:
       abi: Pool
     mapping:

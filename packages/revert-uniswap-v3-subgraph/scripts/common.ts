@@ -4,8 +4,8 @@ import 'dotenv/config'
 import * as fs from 'fs';
 
 
-const GRAFTING_SUBGRAPH_ID=process.env.GRAFTING_SUBGRAPH_ID!;
-const GRAFTING_START_BLOCK=process.env.GRAFTING_START_BLOCK!;
+const GRAFTING_SUBGRAPH_ID=process.env.GRAFTING_SUBGRAPH_ID || "";
+const GRAFTING_START_BLOCK=process.env.GRAFTING_START_BLOCK || "";
 const FACTORY_STARTBLOCK=process.env.FACTORY_STARTBLOCK!;
 const FACTORY_CONTRACT_ADDRESS=process.env.FACTORY_CONTRACT_ADDRESS!;
 const NONFUNGIBLEPOSITIONMANAGER_STARTBLOCK=process.env.NONFUNGIBLEPOSITIONMANAGER_STARTBLOCK!;
@@ -14,7 +14,7 @@ const SUBGRAPH_STUDIO_DEPLOY_KEY = process.env.SUBGRAPH_STUDIO_DEPLOY_KEY!
 
 
 
-const executeCommand = async (command) => {
+const executeCommand = async (command:any) => {
   try {
     const { stdout, stderr } = await exec(command);
     if (stderr) {
@@ -66,10 +66,11 @@ export const addNetwork = async (network:string) => {
     `cross-env touch protocols/deployments/uniswap-v3-subgraph-${network}/configurations.json`,
   );
 
+   console.log(GRAFTING_SUBGRAPH_ID && GRAFTING_START_BLOCK)
   const config = {
-    graftEnabled: true,
-    subgraphId: GRAFTING_SUBGRAPH_ID,
-    graftStartBlock: parseInt(GRAFTING_START_BLOCK),
+    graftEnabled: (GRAFTING_SUBGRAPH_ID && GRAFTING_START_BLOCK) ?  true : false,
+    subgraphId: GRAFTING_SUBGRAPH_ID ? GRAFTING_SUBGRAPH_ID : "",
+    graftStartBlock: GRAFTING_START_BLOCK ? parseInt(GRAFTING_START_BLOCK) : "",
     network: network,
     factory_startBlock: parseInt(FACTORY_STARTBLOCK),
     factory_contract_address: FACTORY_CONTRACT_ADDRESS,
